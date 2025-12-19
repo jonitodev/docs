@@ -1,26 +1,126 @@
-## 5.1 Langkah-langkah Pelaksanaan
+# BAB VI  
+# DOKUMEN HASIL PENGUJIAN
 
-### 5.1.1 Langkah Pelaksanaan
+## 6.1 Tujuan Pengujian
 
-| **WBS Code** | **Fase / Aktivitas** | **Durasi** | **Tanggal Mulai** | **Tanggal Selesai** |
-|-------------|----------------------|------------|-------------------|---------------------|
-| **1.1** | **Inisiasi Proyek** |  |  |  |
-| 1.1.1 | Identifikasi dan pengumpulan kebutuhan sistem | 1 hari | 27 Okt 2025 | 28 Okt 2025 |
-| 1.1.2 | Penetapan ruang lingkup proyek | 1 hari | 28 Okt 2025 | 29 Okt 2025 |
-| 1.1.3 | Penyusunan rencana pelaksanaan proyek | 1 minggu | 30 Okt 2025 | 7 Nov 2025 |
-| **1.2** | **Fase Perancangan (Design)** |  |  |  |
-| 1.2.1 | Pembuatan wireframe dan mockup antarmuka | 1 minggu | 8 Nov 2025 | 15 Nov 2025 |
-| 1.2.2 | Finalisasi desain UI/UX | 2 hari | 15 Nov 2025 | 17 Nov 2025 |
-| **1.3** | **Fase Pengembangan** |  |  |  |
-| **1.3.1** | **Frontend Development** |  |  |  |
-| 1.3.1.1 | Pembuatan layout dasar dan komponen | 5 hari | 17 Nov 2025 | 22 Nov 2025 |
-| 1.3.1.2 | Implementasi desain antarmuka pengguna | 3 minggu | 23 Nov 2025 | 14 Des 2025 |
-| 1.3.1.3 | Pengujian tampilan dan interaksi frontend | 1 hari | 13 Des 2025 | 14 Des 2025 |
-| **1.3.2** | **Backend Development** |  |  |  |
-| 1.3.2.1 | Perancangan dan implementasi database | 1 minggu | 17 Nov 2025 | 24 Nov 2025 |
-| 1.3.2.2 | Implementasi sistem autentikasi | 1 minggu | 4 Nov 2025 | 10 Nov 2025 |
-| 1.3.2.3 | Pengembangan sistem manajemen konten (CMS) | 3 minggu | 11 Nov 2025 | 3 Des 2025 |
-| **1.4** | **Integrasi dan Pengujian** |  |  |  |
-| 1.4.1 | Integrasi antara frontend dan backend | 1 minggu | 3 Des 2025 | 10 Des 2025 |
-| 1.4.2 | Pengujian fungsionalitas sistem | 3 hari | 10 Des 2025 | 14 Des 2025 |
-| 1.4.3 | Perbaikan bug dan optimasi sistem | 2 hari | 15 Des 2025 | 17 Des 2025 |
+Pengujian dilakukan untuk memastikan bahwa seluruh logika internal sistem **Website NCS Laboratory** berjalan sesuai dengan perancangan dan spesifikasi kebutuhan perangkat lunak. Pengujian ini bertujuan untuk mengidentifikasi kesalahan logika, memastikan alur program berjalan dengan benar, serta menjamin kualitas dan keandalan sistem sebelum digunakan secara penuh.
+
+Fokus pengujian pada bab ini adalah **White Box Testing**, yaitu metode pengujian yang dilakukan dengan memahami struktur internal kode program.
+
+Tujuan pengujian meliputi:
+1. Memastikan setiap fungsi dan prosedur berjalan sesuai alur logika
+2. Menguji percabangan dan perulangan dalam program
+3. Memastikan validasi data dan proses bisnis berjalan dengan benar
+4. Mengidentifikasi potensi kesalahan logika pada sistem
+5. Menjamin kestabilan sistem pada berbagai kondisi input
+
+---
+
+## 6.2 Metode Pengujian
+
+### 6.2.1 White Box Testing
+
+White Box Testing merupakan metode pengujian yang berfokus pada struktur internal dan logika program. Pada metode ini, penguji memahami alur kode sumber dan melakukan pengujian terhadap setiap fungsi utama yang ada di dalam sistem.
+
+Pengujian dilakukan dengan cara:
+- Menelusuri kode sumber secara langsung
+- Menguji setiap fungsi menggunakan data uji tertentu
+- Memastikan setiap jalur eksekusi program telah dijalankan
+- Mengevaluasi hasil keluaran sesuai dengan yang diharapkan
+
+---
+
+## 6.3 Teknik White Box Testing yang Digunakan
+
+Teknik White Box Testing yang diterapkan pada proyek ini meliputi:
+
+1. **Statement Coverage**  
+   Pengujian dilakukan untuk memastikan setiap baris kode dieksekusi minimal satu kali selama proses pengujian.
+
+2. **Decision Coverage**  
+   Pengujian dilakukan pada setiap kondisi logika (if–else) untuk memastikan kondisi benar dan salah dapat dieksekusi dengan baik.
+
+3. **Path Coverage**  
+   Pengujian dilakukan untuk memastikan seluruh jalur eksekusi program telah diuji.
+
+4. **Loop Testing**  
+   Pengujian dilakukan pada struktur perulangan untuk memastikan perulangan berjalan dengan benar pada kondisi awal, tengah, dan akhir.
+
+---
+
+## 6.4 Lingkungan Pengujian
+
+Pengujian sistem dilakukan pada lingkungan sebagai berikut:
+
+- **Bahasa Pemrograman:** PHP 8.x  
+- **Database:** PostgreSQL  
+- **Web Server:** Apache / Nginx (dikelola melalui aaPanel)  
+- **Sistem Operasi:** Linux (VPS)  
+- **Browser:** Google Chrome dan Mozilla Firefox  
+
+Lingkungan pengujian disesuaikan dengan lingkungan produksi agar hasil pengujian mencerminkan kondisi sistem sebenarnya.
+
+---
+
+## 6.5 Skenario Pengujian White Box
+
+Pengujian White Box difokuskan pada modul-modul utama sistem sebagai berikut:
+- Modul Autentikasi
+- Modul Manajemen Dokumen
+- Modul Manajemen Galeri
+- Modul Manajemen Agenda
+- Modul Pengelolaan Pesan Pengunjung
+
+---
+
+## 6.6 Hasil Pengujian White Box
+
+### 6.6.1 Pengujian Modul Autentikasi
+
+| **No** | **Fungsi yang Diuji** | **Skenario Pengujian** | **Hasil yang Diharapkan** | **Hasil Pengujian** | **Status** |
+|------|----------------------|------------------------|---------------------------|---------------------|------------|
+| 1 | validasiLogin() | Username dan password valid | Login berhasil | Sesuai | Lulus |
+| 2 | validasiLogin() | Password salah | Login ditolak | Sesuai | Lulus |
+| 3 | validasiLogin() | Input kosong | Validasi gagal | Sesuai | Lulus |
+
+### 6.6.2 Pengujian Modul Manajemen Dokumen
+
+| **No** | **Fungsi yang Diuji** | **Skenario Pengujian** | **Hasil yang Diharapkan** | **Hasil Pengujian** | **Status** |
+|------|----------------------|------------------------|---------------------------|---------------------|------------|
+| 1 | uploadDocument() | File PDF valid | File tersimpan | Sesuai | Lulus |
+| 2 | uploadDocument() | File non-PDF | Upload ditolak | Sesuai | Lulus |
+| 3 | deleteDocument() | Hapus data valid | Data terhapus | Sesuai | Lulus |
+
+### 6.6.3 Pengujian Modul Manajemen Galeri
+
+| **No** | **Fungsi yang Diuji** | **Skenario Pengujian** | **Hasil yang Diharapkan** | **Hasil Pengujian** | **Status** |
+|------|----------------------|------------------------|---------------------------|---------------------|------------|
+| 1 | uploadGallery() | Upload gambar valid | Gambar tersimpan | Sesuai | Lulus |
+| 2 | uploadGallery() | Format tidak valid | Upload ditolak | Sesuai | Lulus |
+
+### 6.6.4 Pengujian Modul Agenda
+
+| **No** | **Fungsi yang Diuji** | **Skenario Pengujian** | **Hasil yang Diharapkan** | **Hasil Pengujian** | **Status** |
+|------|----------------------|------------------------|---------------------------|---------------------|------------|
+| 1 | createAgenda() | Data agenda valid | Agenda tersimpan | Sesuai | Lulus |
+| 2 | updateAgenda() | Edit data agenda | Data terupdate | Sesuai | Lulus |
+
+---
+
+## 6.7 Evaluasi Hasil Pengujian
+
+Berdasarkan hasil pengujian White Box yang telah dilakukan, seluruh fungsi utama sistem telah berjalan sesuai dengan perancangan. Tidak ditemukan kesalahan logika kritis yang dapat mengganggu proses utama sistem.
+
+Seluruh jalur eksekusi program telah diuji dan menghasilkan keluaran yang sesuai dengan hasil yang diharapkan.
+
+---
+
+## 6.8 Kesimpulan Pengujian
+
+Berdasarkan hasil White Box Testing yang dilakukan, dapat disimpulkan bahwa:
+1. Struktur logika program telah berjalan dengan baik
+2. Seluruh fungsi utama sistem berfungsi sesuai rancangan
+3. Sistem siap digunakan dan dilanjutkan ke tahap deployment
+4. Tidak ditemukan error kritis pada proses pengujian internal
+
+Dengan demikian, **Website NCS Laboratory** dinyatakan **layak untuk digunakan** sesuai dengan tujuan pengembangan sistem.
